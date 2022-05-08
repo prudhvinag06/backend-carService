@@ -49,7 +49,7 @@
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 				<configuration>
-					<finalName>carServicesApp</finalName>
+					<finalName>carServiceApp</finalName>
 				</configuration>
 			</plugin>
 		</plugins>
