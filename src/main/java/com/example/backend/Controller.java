@@ -1,6 +1,8 @@
 package com.example.backend;
 
 import com.example.backend.DAO.*;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -10,6 +12,7 @@ import java.util.List;
 @CrossOrigin(origins = "http://localhost:3000/")
 
 public class Controller {
+    private static final Logger logger = LogManager.getLogger(Controller.class);
 
     @Autowired
     private DetailsJpaRepository detailsJpaRepository;
@@ -24,6 +27,7 @@ public class Controller {
 
     @PostMapping("/users/register/")
     public Long addUser(@RequestBody UserDetails details){
+        logger.info("[REGISTER]" + "Asdasd");
         UserDetails details1 = detailsJpaRepository.save(details);
         //return id of user and use that to get current bookings etc
         return details.getUser_id();
