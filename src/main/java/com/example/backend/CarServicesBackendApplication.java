@@ -10,7 +10,7 @@ public class CarServicesBackendApplication {
 	private static final Logger logger = LogManager.getLogger(CarServicesBackendApplication.class);
 	CarServicesBackendApplication(){}
 	public static void main(String[] args) {
-		CarServicesBackendApplication.logger.info("[REGISTER]", 1);
+		CarServicesBackendApplication.logger.info("[CONTROLLER STARTING]", 1);
 		SpringApplication.run(CarServicesBackendApplication.class, args);
 	}
 
